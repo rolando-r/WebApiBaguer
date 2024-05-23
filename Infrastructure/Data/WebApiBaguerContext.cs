@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -15,4 +16,11 @@ public class WebApiBaguerContext : DbContext
     // Colección de entidades para la DB
     public DbSet<Usuario> Usuarios { get; set;}
     public DbSet<Rol> Roles { get; set; }
+    
+    // Función para aplicar las configuraciones
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+    }
 }
