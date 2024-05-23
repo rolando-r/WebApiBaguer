@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
+// Añadir el contexto de la db a los servicios de la API
 builder.Services.AddDbContext<WebApiBaguerContext>(options =>
 {
     string ? connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
