@@ -1,7 +1,10 @@
+using API.Extensions;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+// Dar la funcionalidad de las Cors
+builder.Services.ConfigureCors();
 builder.Services.AddControllers();
 
 // Añadir el contexto de la db a los servicios de la API
@@ -24,6 +27,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
 
