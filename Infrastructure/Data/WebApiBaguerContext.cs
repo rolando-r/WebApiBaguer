@@ -16,7 +16,7 @@ public class WebApiBaguerContext : DbContext
     // Colección de entidades para la DB
     public DbSet<Usuario> Usuarios { get; set;}
     public DbSet<Rol> Roles { get; set; }
-    
+    public DbSet<UsuarioRoles> UsuarioRoles { get; set; }
     // Función para aplicar las configuraciones
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

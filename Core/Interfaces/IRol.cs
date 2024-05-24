@@ -1,7 +1,7 @@
-using Api.Interfaces;
+using Core.Interfaces;
 using Core.Entities;
 
-namespace Domain.Interfaces;
+namespace Core.Interfaces;
 
 public interface IRol : IGenericRepository<Rol>
 {

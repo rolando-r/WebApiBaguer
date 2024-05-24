@@ -11,7 +11,7 @@ public class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
         builder.ToTable("Usuario");
 
         // Valores de los atributos
-        builder.Property(x => x.NombreUsuario)
+        builder.Property(x => x.Username)
         .IsRequired()
         .HasMaxLength(100);
 
@@ -19,13 +19,33 @@ public class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
         .IsRequired()
         .HasMaxLength(100);
 
-        builder.Property(x => x.Clave)
+        builder.Property(x => x.Password)
         .IsRequired()
         .HasMaxLength(100);
 
-        // Relación con rol
-        builder.HasOne(x => x.Rol)
-        .WithOne()// Rol por usuario
-        .HasForeignKey<Usuario>(x => x.RolId);
+        builder.HasIndex(e => e.Username).IsUnique();//Sirve para verificar que  el mismo usuario no este duplicado
+
+               builder.HasMany(x => x.Roles)
+                   .WithMany(x => x.Usuarios)
+                   .UsingEntity<UsuarioRoles>(
+                   
+                   j => j
+                   .HasOne(pt => pt.Rol)
+                   .WithMany(t => t.UsuarioRoles)
+                   .HasForeignKey(ut => ut.RolId),
+
+                   j => j
+                   .HasOne(et => et.Usuario)
+                   .WithMany(et => et.UsuarioRoles)
+                   .HasForeignKey(el => el.UsuarioId),
+
+
+                    j =>
+                    
+                    {
+                         j. HasKey(t => new {t.RolId,t.UsuarioId});
+                    }
+                          
+                   );  
     }
 }

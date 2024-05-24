@@ -1,6 +1,5 @@
 using System.Linq.Expressions;
-using Api.Interfaces;
-using Domain.Interfaces;
+using Core.Interfaces;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
