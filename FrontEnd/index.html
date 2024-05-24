@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <!-- Agregar los enlaces a los archivos CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Iniciar Sesión</title>
+        <!-- Agregar los enlaces a los archivos CSS de Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container-fluid" style="height: 100vh;">
+            <div class="row h-100">
+                <!-- Columna izquierda para el formulario de inicio de sesión -->
+                <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
+                    <h1 class="border border-4 rounded border-primary p-2 text-primary mb-5 fw-bold">Baguer</h1>
+                    <div class="card w-50 border border-4" style="-webkit-box-shadow: 53px 51px 14px 5px rgba(189,189,189,0.54); -moz-box-shadow: 53px 51px 14px 5px rgba(189,189,189,0.54); box-shadow: 53px 51px 14px 5px rgba(189,189,189,0.54);">
+                        <div class="card-header text-center border-0 bg-white p-3" >
+                            <h2 class="mb-4 fw-semibold fs-3">INICIAR SESION</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="inicioSesion" class="text-center">
+                                <div class="form-group">
+                                    <label class="fw-semibold" for="txtUsername">Nombre de Usuario:</label>
+                                    <input type="text" class="form-control" id="txtUsername" name="username" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="fw-semibold" for="txtPassword">Contraseña:</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="txtPassword" name="password" required>
+                                        <div class="input-group-append">
+                                            <button class="btn border-0" type="button" id="showPasswordBtn">
+                                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABYklEQVRIS+2U4U3DMBCF2w3oBmECYIMwAWWDMkHLBBUTwAZ0A9oJWiYAJmhGYIS+L9xFFyu1kVDFn5705CS27717Z2c8OnGMT5x/dCYoOlyy6EIZamEu8FxZxkYj2AirHMsxApIthZklLil90YLHoUVDBCR/Faa2YafxXWD8NlxrBFdh3aeeb22+40oJSL61zSRDVdYCI3jWWFnyy0iSErBwIaRq3LLaLFsPWPJhwpi79xIiAZa8GfuNxqar84cU8hip74iAhEoggKh30VwBtrA5xt42xm9YOEnWRZHtXKzAkzzo++qPBFRPL3oEkb3XKLMHm0oW+QHpXEibTA8gosn0IQY9mNkHKnwSsImIR/tok32hq4CEJG2zMlFbhdwLCLPHNCXhHYIvYWdAbbxoXhWCOD1NFJP7F/mdKBTQqvZ74ZZ1e37zs0PhnVAZSAJQyi+E5KgfjBJBSX1x/kzw/xYdADT3UxlPFwKcAAAAAElFTkSuQmCC"/>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary fw-semibold">INICIAR SESION</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Columna derecha para la imagen -->
+                <div class="col-md-6 d-flex justify-content-center align-items-center bg-primary">
+                    <img src="./Assets/logo.png" class="img-fluid" alt="Imagen de la farmacia">
+                </div>
+            </div>
+        </div>
+    
+        <!-- Agregar los enlaces a los archivos JavaScript de Bootstrap y Font Awesome -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <script src="/js/usuario.js" type="module"></script>
+    
+        <script>
+            // Función para mostrar u ocultar la contraseña
+            const showPasswordBtn = document.getElementById('showPasswordBtn');
+            const passwordInput = document.getElementById('txtPassword');
+            showPasswordBtn.addEventListener('click', function () {
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    showPasswordBtn.innerHTML = '<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABjUlEQVRIS7WWjU0DMQxG2w1gg2MC6AZlAmACygSUEToBbAAbABNwTABMACMwAt+L7JNJkzaIu0hW2vz42Z+dqvPZxGM+sf9ZDlgJ+CT7HgscATi/l73LTseCRMCBnL7ITsaE5BLlkAsDXmtmrzPpvjRjz7KHXXKWihwhraW408Gb0uEagFqchwsbfe4tapaRETsO54q12yeRO+MycpyZVMCAIhOB3Mo6Gd13ZHOKLwc8hoj8oBc+V4D60NI+3iwr1tjbAhAJAB+eMt9LkIVFShYMagekM0CCxww8AlJHitiuNQiSHIagPMhhPQI+jX6lGXr+JkoQsiQTHw4gKyT+lUGkp80GSGxPJCJIZlqWvWqRe+3xc1F63TWwtzZ3KTIybQGiQ9LkIPMuuZAJZ0s7S2DcSaPlJVOPD9mlrJPhEDAO6X+CYvj64LwGcDiX1/6lYW56ybkfolvJaFuix5ADI9JXWW+ZxLZO+u/LoCHo4UipGYpF/ovTUrbeDNU2/Q+Auy5pegNjSlQNbPJ/FT/s6W4Z28cdMwAAAABJRU5ErkJggg=="/>';
+                } else {
+                    passwordInput.type = 'password';
+                    showPasswordBtn.innerHTML = '<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABYklEQVRIS+2U4U3DMBCF2w3oBmECYIMwAWWDMkHLBBUTwAZ0A9oJWiYAJmhGYIS+L9xFFyu1kVDFn5705CS27717Z2c8OnGMT5x/dCYoOlyy6EIZamEu8FxZxkYj2AirHMsxApIthZklLil90YLHoUVDBCR/Faa2YafxXWD8NlxrBFdh3aeeb22+40oJSL61zSRDVdYCI3jWWFnyy0iSErBwIaRq3LLaLFsPWPJhwpi79xIiAZa8GfuNxqar84cU8hip74iAhEoggKh30VwBtrA5xt42xm9YOEnWRZHtXKzAkzzo++qPBFRPL3oEkb3XKLMHm0oW+QHpXEibTA8gosn0IQY9mNkHKnwSsImIR/tok32hq4CEJG2zMlFbhdwLCLPHNCXhHYIvYWdAbbxoXhWCOD1NFJP7F/mdKBTQqvZ74ZZ1e37zs0PhnVAZSAJQyi+E5KgfjBJBSX1x/kzw/xYdADT3UxlPFwKcAAAAAElFTkSuQmCC"/>';
+                }
+            });
+        </script>
+    </body>
+    </html>
+    
+</body>
+</html>

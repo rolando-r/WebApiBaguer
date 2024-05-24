@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="FrontEnd/Css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="/FrontEnd/Css/style.css">
+	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js" defer></script>
+	<script src="/FrontEnd/Js/main.js" defer></script>
+	<script src="/FrontEnd/Js/jquery.js" defer></script>
+	<script src="/FrontEnd/Js/bootstrap/bootstrap.min.js" defer></script>
+	
+	<script src="/FrontEnd/Js/app/app.js" defer type="module"></script>
+	<title>Baguer</title>
+</head>
+<body>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand text-center"><i class="p-3 fs-6"></i><span class="fw-bold p-2">Baguer</span></a>
+		<ul class="side-menu">
+			<li><a href="#" class="active" id="logout"><i class='bx bx-log-out icon' ></i> Cerrar Sesion </a></li>
+			<li class="divider" data-text="main">Main</li>
+			<li>
+				<a href="#"><i class='bx bx-user icon'></i> Empleados <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a class="entidades" data-verocultar='[["#navMenu","#divEmpleado","#navEmpleado"],["#Dashboard"]]' href="#">Empleados</a></li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- NAVBAR -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu toggle-sidebar' ></i>
+			<for action="#">
+				
+			</for>
+			<span class="divider"></span>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+
+			
+			<div id="Dashboard" style="display: none;">
+
+
+
+
+
+				<h1 class="title">Dashboard</h1>
+				<ul class="breadcrumbs">
+					<li><a href="#">Home</a></li>
+					<li class="divider">/</li>
+					<li><a href="#" class="active">Dashboard</a></li>
+				</ul>
+
+			</div>
+
+			<!-- Paises -->
+			<div id="navMenu" style="display:none"  >
+				
+				<navbar-menu></navbar-menu>
+
+			</div>
+
+		   <div id="divEmpleado" style="display:none;" >
+			<frm-reglist-empleado></frm-reglist-empleado>
+	   		</div>
+
+			<div>
+				<registrar-usuario></registrar-usuario>
+			</div>
+            
+
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- NAVBAR -->
+
+
+	<script src="/FrontEnd/Js/logout.js"></script>
+</body>
+</html>
