@@ -16,6 +16,9 @@ Desarrollar una aplicación completa para el control de empleados de una tienda.
 
 - **FrontEnd:** Aqui encontraremos el diseño de la aplicación web
 
+## Base de Datos 🏬
+[![Base de datos-2024-05-24-031504.png](https://i.postimg.cc/X7RnfYxC/Captura-de-pantalla-2024-05-24-031504.png)](https://postimg.cc/BXCWssrS)
+
 ## 🛠 Skills
 
 C#, .NETCore, JWT, HTML, CSS, JS, Bootstrap
